@@ -1,10 +1,12 @@
 # 🌍 Urban Heat Simulator: Bucharest Case Study
 
+
 ![Python](https://img.shields.io/badge/Python-3.14-blue)
 ![Flask](https://img.shields.io/badge/Flask-Backend-green)
 ![React](https://img.shields.io/badge/React-Frontend-61DAFB)
 ![Machine Learning](https://img.shields.io/badge/ML-Scikit_Learn-orange)
 ![Google Earth Engine](https://img.shields.io/badge/Geospatial-Earth_Engine-purple)
+
 
 ## 📌 Overview
 The Urban Heat Simulator is a full-stack web application designed to help visualize and predict the Urban Heat Island (UHI) effect in Bucharest. 
