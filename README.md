@@ -31,6 +31,19 @@ Instead of just looking at static temperature maps, this tool allows users to ru
 * **Machine Learning:** Scikit-Learn (Ridge Regression, Pandas, NumPy).
 * **Geospatial Data:** Google Earth Engine API & Copernicus Urban Atlas.
 
+## 👩‍💻 My Contribution (Ioana Nițan): NO₂ Air-Quality Model
+
+This project was built by a team of 5 during the **ROSPIN Satellite Data Processing Masterclass (2nd edition, 2025)**. My part was extending the simulator from temperature to **air quality**, with a model that predicts nitrogen dioxide (NO₂) levels from land use and temperature.
+
+📂 **Code:** [`no2-model` branch](../../tree/no2-model) (not yet merged into `main`)
+
+**What I built:**
+* **Data download:** scripts that fetch Copernicus **CAMS** NO₂ reanalysis and **ERA5** 2 m temperature for the Bucharest area through the CDS API ([`download_no2_cams.py`](../../blob/no2-model/backend/scripts/download_no2_cams.py), [`download_temp_era5.py`](../../blob/no2-model/backend/scripts/download_temp_era5.py)).
+* **Data processing:** processed the raw Copernicus data and combined it with the land-use percentages into a training dataset of ~780 rows ([`no2_training_data.csv`](../../blob/no2-model/backend/scripts/no2_training_data.csv)).
+* **Model:** trained a **Random Forest regressor** (scikit-learn) that takes the land-use mix + temperature and predicts NO₂, evaluated with RMSE on a 20% hold-out split, and saved it for the backend (`urban_no2_model.joblib`) ([`download_maps.py`](../../blob/no2-model/backend/scripts/download_maps.py)).
+
+**Tech:** Python, pandas, NumPy, scikit-learn, cdsapi, Copernicus CAMS & ERA5.
+
 ## 🛠️ Local Setup & Installation
 
 ### Prerequisites
